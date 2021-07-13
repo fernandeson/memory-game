@@ -26,7 +26,7 @@ function newGame(gameLevel) {
     newCard.attr("src", "images/lotus.png");
   };
 
-  // viewport width according to number of cards
+  // sets viewport width according to number of cards
     if (gameLevel <= 4) {
       $(".cards").css("max-width", "70vw");
     } else if (gameLevel > 4) {
