@@ -17,7 +17,7 @@ function newGame(gameLevel) {
   $("#level").text("Level:" + gameLevel);
   $("#clicks").text("Clicks: " + totalClicks);
 
-  numberOfCards = 4 * gameLevel; // total of cards to play with: level0: 8cards; level1: 12; level2: 16; ... ; level8: 40cards;
+  numberOfCards = 4 * gameLevel; // total of cards to play with: level-1: 4cards; level-2: 8; level3: 12; ... ; level10: 40cards;
 
   // creates HTML elements <img> (cards)
   for (var i=0; i<numberOfCards; i++) {
