@@ -5,7 +5,6 @@ var firstClick = true;
 var numberOfCards = 0; // goes from 4 to 40 (increases 4 at each levelUp)
 var userGuesses = []; // list of user's guesses
 var images = []; // array of images urls
-var imgPath = "///C:/Users/Nat%C3%A1lia/repos/WebDev/memoryGame/images/"; // IMG URL from windows
 
 // ---------------------- FUNCTIONS ---------------------- //
 // Starts new game according to level
@@ -24,7 +23,7 @@ function newGame(gameLevel) {
   for (var i=0; i<numberOfCards; i++) {
     var newCard = $("<img id='img" + i + "' class='card-img card-back'>");
     $(".cards").append(newCard);
-    newCard.attr("src", imgPath + "lotus.png");
+    newCard.attr("src", "images/lotus.png");
   };
 
   // viewport width according to number of cards
@@ -36,8 +35,8 @@ function newGame(gameLevel) {
 
   // populates images array
   for (var i=0; i<(numberOfCards/2); i++){
-    images.push(imgPath + i + ".png");
-    images.push(imgPath + i + ".png");
+    images.push("images/" + i + ".png");
+    images.push("images/" + i + ".png");
   };
   // shuffle images array with Fisher-Yates method
   for (var i = images.length - 1; i > 0; i--) {
@@ -55,7 +54,7 @@ function flipCard(element) {
     if (element.hasClass("card-front")) {
       element.attr("src", images[element.attr("id").slice(3)]);
     } else if (element.hasClass("card-back")) {
-      element.attr("src", imgPath + "lotus.png");
+      element.attr("src", "images/lotus.png");
     }
   },200);
 };
