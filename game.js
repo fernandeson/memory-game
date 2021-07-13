@@ -1,5 +1,5 @@
 // ---------------------- GLOBAL VARIABLES ---------------------- //
-var level = 10; // goes from 1 to 10
+var level = 1; // goes from 1 to 10
 var totalClicks = 0; // click counter
 var firstClick = true;
 var numberOfCards = 0; // goes from 4 to 40 (increases 4 at each levelUp)
